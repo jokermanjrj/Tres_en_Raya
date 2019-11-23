@@ -32,7 +32,7 @@ public class Pantalla_Inicial extends AppCompatActivity {
     }
 
     private int jugadores;
-
+    public Partida partida;
     private int[] CASILLAS;
 
     // Partida partida;
@@ -73,7 +73,7 @@ public class Pantalla_Inicial extends AppCompatActivity {
                 dificultad=2;
             }
 
-            Partida partida = new Partida(dificultad);
+            partida = new Partida(dificultad);
 
             ((Button)findViewById(R.id.unjug)).setEnabled(false);
 
@@ -87,6 +87,11 @@ public class Pantalla_Inicial extends AppCompatActivity {
 
     public void toque(View mivista)
     {
+        if(partida==null)
+        {
+            return;
+        }
+
         int casilla = 0;
 
         for (int i=0;i<9;i++)
@@ -98,10 +103,36 @@ public class Pantalla_Inicial extends AppCompatActivity {
             }
         }
 
-        Toast toast = Toast.makeText(this,"Has pulsado la casilla "+casilla, Toast.LENGTH_LONG);
+        //Toast toast = Toast.makeText(this,"Has pulsado la casilla "+casilla, Toast.LENGTH_LONG);
 
-        toast.setGravity(Gravity.CENTER,0,0);
+        //toast.setGravity(Gravity.CENTER,0,0);
 
-        toast.show();
+        //toast.show();
+
+        marca(casilla);
+
+        casilla=partida.ia();
+
+        partida.turno();
+
+        marca(casilla);
+
     }
+
+
+    private void marca(int casilla) {
+
+        ImageView imagen;
+
+        imagen=(ImageView)findViewById(CASILLAS[casilla]);
+
+        if(partida.jugador==1)
+        {
+            imagen.setImageResource(R.drawable.circulo);
+        }
+        else{
+            imagen.setImageResource(R.drawable.aspa);
+        }
+    }
+
 }
