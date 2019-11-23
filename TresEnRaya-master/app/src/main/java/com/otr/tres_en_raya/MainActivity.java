@@ -1,28 +1,21 @@
 package com.otr.tres_en_raya;
 
-import android.animation.ValueAnimator;
-import android.app.Activity;
-import android.content.Intent;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.Gravity;
 import android.view.View;
-import android.view.ViewGroup;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
-import android.view.animation.Transformation;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.support.v4.widget.Space;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
-import android.widget.Toast;
+
 
 
 public class MainActivity extends AppCompatActivity {
+
 
     private int jugadores;
     private RadioGroup grupo_radio;

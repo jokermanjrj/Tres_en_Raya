@@ -16,8 +16,8 @@ public class Inicio extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        playButton = (Button) findViewById(R.id.boton);
-       // musica_iniciar();
+        playButton = (Button) findViewById(R.id.Button);
+        //musica_iniciar();
         contador();
         playButton.setVisibility(View.GONE);
     }
@@ -26,12 +26,12 @@ public class Inicio extends AppCompatActivity {
     {
         mp = MediaPlayer.create(this,R.raw.casino);
         mp.start();
-    }*/
+    }
 
     public void musica_parar()
     {
         mp.stop();
-    }
+    }*/
 
     public void contador()
     {
@@ -45,8 +45,9 @@ public class Inicio extends AppCompatActivity {
 
             public void onFinish() {
                 TextView texto_contador = (TextView) findViewById(R.id.contador);
+                texto_contador.setVisibility(View.GONE);
                 playButton.setVisibility(View.VISIBLE);
-                musica_parar();
+                //musica_parar();
             }
         }.start();
 
@@ -59,3 +60,4 @@ public class Inicio extends AppCompatActivity {
     }
 
 }
+
