@@ -24,11 +24,13 @@ public class MainActivity extends Activity {
         musica_iniciar();
         contador();
         playButton.setVisibility(View.GONE);
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_pantalla_nombres);
+
+        Intent intent = new Intent (this, Pantalla_escribir.class);
+        startActivity(intent);
     }
     public void cambio(View view) {
-
+        Intent intent = new Intent (this, Pantalla_escribir.class);
+        startActivity(intent);
     }
 
     public void musica_iniciar()
