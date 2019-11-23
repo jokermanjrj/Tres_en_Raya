@@ -50,6 +50,7 @@ public class MainActivity extends Activity {
 
              public void onFinish() {
                  TextView texto_contador = (TextView) findViewById(R.id.contador);
+                 texto_contador.setVisibility(View.GONE);
                  playButton.setVisibility(View.VISIBLE);
                  musica_parar();
              }
