@@ -8,4 +8,13 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+
+    <style name="casilla">
+        <item name="android:layout_width">@dimen/casilla</item>
+        <item name="android:layout_height">@dimen/casilla</item>
+        <item name="android:src">@drawable/casilla</item>
+        <item name="android:onClick">toque</item>
+        <item name="android:layout_margin">2dp</item>
+
+    </style>
 </resources>
