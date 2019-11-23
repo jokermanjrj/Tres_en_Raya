@@ -40,8 +40,6 @@ public class Juego extends AppCompatActivity {
 
 
 
-
-
     public void toque(View mivista)
     {
         ImageView imagen;
@@ -70,5 +68,12 @@ public class Juego extends AppCompatActivity {
         toast.setGravity(Gravity.CENTER,0,0);
 
         toast.show();
+    }
+
+    private void marca(int casilla) {
+
+        ImageView imagen;
+
+
     }
 }
