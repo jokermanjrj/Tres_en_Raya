@@ -3,10 +3,12 @@ package com.example.project;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RadioGroup;
+import android.widget.Toast;
 
 public class Pantalla_Inicial extends AppCompatActivity {
 
@@ -71,14 +73,35 @@ public class Pantalla_Inicial extends AppCompatActivity {
                 dificultad=2;
             }
 
-            //partida = new Partida(dificultad);
+            Partida partida = new Partida(dificultad);
 
             ((Button)findViewById(R.id.unjug)).setEnabled(false);
 
-            //((RadioGroup)findViewById(R.id.configD).setAlpha(0));
+            ((RadioGroup)findViewById(R.id.dificultad)).setAlpha(0);
 
-            ((Button)findViewById(R.id.unjug)).setEnabled(true);
+            ((Button)findViewById(R.id.dosjug)).setEnabled(false);
 
 
+    }
+
+
+    public void toque(View mivista)
+    {
+        int casilla = 0;
+
+        for (int i=0;i<9;i++)
+        {
+            if(CASILLAS[i]==mivista.getId())
+            {
+                casilla=i;
+                break;
+            }
+        }
+
+        Toast toast = Toast.makeText(this,"Has pulsado la casilla "+casilla, Toast.LENGTH_LONG);
+
+        toast.setGravity(Gravity.CENTER,0,0);
+
+        toast.show();
     }
 }
