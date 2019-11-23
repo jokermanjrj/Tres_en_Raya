@@ -11,4 +11,7 @@ public class Pantalla_nombres extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pantalla_nombres);
     }
+
+
+
 }
