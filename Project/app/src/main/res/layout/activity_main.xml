@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="@dimen/paddinf_pantalla"
     android:orientation="horizontal"
     android:background="@mipmap/ic_launcher_foreground"
-    tools:context=".MainActivity"
-   >
+    >
 
     <TextView
         android:id="@+id/textView"
@@ -17,10 +16,7 @@
         android:layout_marginLeft="100dp"
         android:layout_marginTop="32dp"
         android:text="Desarrolladores:"
-        android:textSize="30sp"
-        app:fontFamily="@font/almendra"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textSize="30sp" />
 
     <TextView
         android:id="@+id/textView5"
@@ -30,10 +26,7 @@
         android:layout_marginLeft="160dp"
         android:layout_marginTop="32dp"
         android:text="Rubén"
-        android:textSize="30sp"
-        app:fontFamily="@font/almendra"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        android:textSize="30sp" />
 
     <TextView
         android:id="@+id/textView4"
@@ -43,10 +36,8 @@
         android:layout_marginLeft="160dp"
         android:layout_marginTop="24dp"
         android:text="Iván"
-        android:textSize="30sp"
-        app:fontFamily="@font/almendra"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+        android:textSize="30sp"/>
+
 
     <Button
         android:id="@+id/boton"
@@ -56,16 +47,14 @@
         android:layout_marginLeft="380dp"
         android:layout_marginTop="156dp"
         android:text="Button"
-        android:onClick="llamar"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:onClick="llamar"/>
+
 
     <TextView
         android:id="@+id/contador"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
