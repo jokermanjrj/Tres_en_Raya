@@ -1,6 +1,5 @@
 package com.example.project;
 
-import androidx.appcompat.app.AppCompatActivity;
 import android.app.Activity;
 import android.content.Intent;
 import android.media.MediaPlayer;
@@ -25,6 +24,11 @@ public class MainActivity extends Activity {
         musica_iniciar();
         contador();
         playButton.setVisibility(View.GONE);
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_pantalla_nombres);
+    }
+    public void cambio(View view) {
+
     }
 
     public void musica_iniciar()
@@ -59,9 +63,5 @@ public class MainActivity extends Activity {
      }
 
 
-    public void cambio(View view) {
-        Intent intent = new Intent (this, Pantalla_nombres.class);
-        startActivity(intent);
-    }
 
 }

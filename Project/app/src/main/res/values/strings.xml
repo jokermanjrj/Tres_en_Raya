@@ -18,4 +18,6 @@
     <string name="aspas_ganan">Jugador 2 Gnar</string>
 
     <string name="empate">Empate Lamentable</string>
+
+    <string name="inicio" translatable="false">Inicio</string>
 </resources>
