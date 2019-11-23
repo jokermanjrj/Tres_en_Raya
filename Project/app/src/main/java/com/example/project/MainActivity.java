@@ -21,7 +21,7 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        playButton = (Button) findViewById(R.id.boton);
+        playButton = (Button) findViewById(R.id.button);
         musica_iniciar();
         contador();
         playButton.setVisibility(View.GONE);
@@ -59,9 +59,9 @@ public class MainActivity extends Activity {
      }
 
 
-    public void cambio(View vista) {
-        Intent intent = new Intent (vista.getContext(), Pantalla_nombres.class);
-        startActivityForResult(intent, 0);
+    public void cambio(View view) {
+        Intent intent = new Intent (this, Pantalla_nombres.class);
+        startActivity(intent);
     }
 
 }
