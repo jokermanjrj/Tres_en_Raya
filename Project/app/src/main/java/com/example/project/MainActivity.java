@@ -40,7 +40,7 @@ public class MainActivity extends Activity {
 
      public void contador()
      {
-         new CountDownTimer(30000, 1000) {
+         new CountDownTimer(5000, 1000) {
 
              public void onTick(long millisUntilFinished) {
                  TextView texto_contador = (TextView) findViewById(R.id.contador);

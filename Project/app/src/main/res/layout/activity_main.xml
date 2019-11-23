@@ -18,6 +18,7 @@
         android:text="Desarrolladores:"
         android:textSize="30sp" />
 
+<<<<<<< Updated upstream
     <TextView
         android:id="@+id/textView5"
         android:layout_width="90dp"
@@ -55,6 +56,34 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         />
+=======
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/boton"
+            android:layout_width="335dp"
+            android:layout_height="94dp"
+            android:layout_marginStart="244dp"
+            android:layout_marginLeft="244dp"
+            android:layout_marginTop="132dp"
+            android:onClick="llamar"
+            android:text="Button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/contador"
+            android:layout_width="185dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="324dp"
+            android:layout_marginLeft="324dp"
+            android:layout_marginTop="80dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+>>>>>>> Stashed changes
 
 
 </LinearLayout>
