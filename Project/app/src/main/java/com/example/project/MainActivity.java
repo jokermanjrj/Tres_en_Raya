@@ -59,7 +59,7 @@ public class MainActivity extends Activity {
 
 
     public void llamar(View vista) {
-        Intent inte = new Intent(this,Button.class);
+        Intent inte = new Intent(this,Activity.class);
         startActivity(inte);
     }
 
