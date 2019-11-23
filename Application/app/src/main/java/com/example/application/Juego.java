@@ -29,36 +29,16 @@ public class Juego extends AppCompatActivity {
         CASILLAS[6] = R.id.c1;
         CASILLAS[7] = R.id.c2;
         CASILLAS[8] = R.id.c3;
+
     }
+
     private int[] CASILLAS;
-    public int jugadores = 1;
-    // Partida partida;
-
-    //Declaramos el metodo que llamamos al pusar 1 o dos jugadores
-    public void aJugar(View vista,int jugadores)
-    {
-        jugadores=1;
-
-        if(vista.getId()==R.id.dosjug) {
-            jugadores=2;
-        }
-
-        //Declaramos el grupo de botones de dificultad
-        RadioGroup configDificultad=(RadioGroup)findViewById(R.id.dificultad);
-        //En la variable id nos devolvera el valor numerico del id de la dificultad seleccionada
-        //de forma que si elegimos facil devolvera 1, normal 2 e imposible 3
-        int id = configDificultad.getCheckedRadioButtonId();
-
-        int dificultad = 0;
-
-        ((Button)findViewById(R.id.unjug)).setEnabled(false);
-
-        ((RadioGroup)findViewById(R.id.dificultad)).setAlpha(0);
-
-        ((Button)findViewById(R.id.dosjug)).setEnabled(false);
+    Partida partida;
 
 
-    }
+
+
+
 
 
 
