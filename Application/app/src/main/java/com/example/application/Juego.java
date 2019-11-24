@@ -80,11 +80,7 @@ public class Juego extends AppCompatActivity {
 
             termina(resultado);
 
-            aJugar();
-
-
-
-
+             aJugar();
 
         }
 
@@ -112,11 +108,11 @@ public class Juego extends AppCompatActivity {
 
     private void termina(int resultado)
     {
-            String mensaje;
+            String mensaje = null;
 
             if (resultado==1)mensaje="Gana jugador 1 (Nombre de jugador)";
             else if(resultado==2) mensaje="Gana la IA";
-            else mensaje="Empate Titan";
+            else mensaje="Empate";
 
             Toast toast = Toast.makeText(this,mensaje,Toast.LENGTH_LONG);
 

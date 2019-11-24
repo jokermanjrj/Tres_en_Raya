@@ -20,14 +20,13 @@ public class Nombres extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_nombres);
-
+        EditText et =(EditText) findViewById(R.id.nombre);
+        nm = et.getText().toString();
 
     }
 
     public void aJugar(View vista)
     {
-       /* EditText et =(EditText) findViewById(R.id.nombre);
-        nm = et.getText().toString();*/
 
 
         Intent intent = new Intent(this,Juego.class);

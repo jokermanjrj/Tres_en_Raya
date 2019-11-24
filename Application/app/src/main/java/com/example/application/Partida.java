@@ -17,24 +17,25 @@ public class Partida {
             for (int i=0;i<9;i++)
             {
                 casillas[i]=0;
+                System.out.println(casillas[i]);
             }
+
         }
+
+
 
 
         public boolean comprueba_casilla(int casilla)
         {
-
             if(casillas[casilla]!=0) {
-
                 return false;
             }else{
-
                 casillas[casilla]=jugador;
-
             }
-
             return true;
         }
+
+
 
 
         public int turno() {
@@ -53,6 +54,7 @@ public class Partida {
                     if(casillas[pos]==0) {
                         empate = false;
                     }
+
 
                 }
 
