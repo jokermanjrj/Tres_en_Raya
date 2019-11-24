@@ -49,11 +49,6 @@ public class Juego extends AppCompatActivity {
 
     public void toque(View mivista)
     {
-
-
-
-        //Declaramos la variable jugadores en 1 por defecto para que si pulsamos 1 jugador no ca
-        //mbie nada y si pulsamos dos jugadores entre en el if y la cambie a dos
         int casilla = 0;
 
         for (int i=0;i<9;i++)
@@ -71,6 +66,10 @@ public class Juego extends AppCompatActivity {
         }
         marca(casilla);
 
+
+
+        partida.turno();
+
         casilla=partida.ia();
 
 
@@ -80,9 +79,11 @@ public class Juego extends AppCompatActivity {
 
         }
 
-       partida.turno();
 
         marca(casilla);
+
+        partida.turno();
+
     }
 
 
