@@ -14,16 +14,17 @@ import android.widget.Toast;
 
 public class Nombres extends AppCompatActivity {
 
-    public String nm;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_nombres);
         EditText et =(EditText) findViewById(R.id.nombre);
-        nm = et.getText().toString();
+        String nm = et.getText().toString();
 
     }
+
+    public String nm;
 
     public void aJugar(View vista)
     {

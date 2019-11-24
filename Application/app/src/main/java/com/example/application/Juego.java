@@ -21,8 +21,8 @@ public class Juego extends AppCompatActivity {
         setContentView(R.layout.activity_juego);
 
         Nombres nombres = null;
-        /*TextView tx = (TextView) findViewById(R.id.jg);
-        tx.setText(nombres.nm);*/
+        TextView tx = (TextView) findViewById(R.id.jg);
+        tx.setText(nombres.nm);
 
 
         //Iniciamos el array casillas que identifica cada casilla y la almacena en el array
