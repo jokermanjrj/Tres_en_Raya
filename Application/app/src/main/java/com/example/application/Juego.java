@@ -2,6 +2,7 @@ package com.example.application;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
@@ -66,13 +67,20 @@ public class Juego extends AppCompatActivity {
         }
         marca(casilla);
 
-        
+
 
         int resultado = partida.turno();
 
         if (resultado>0){
 
             termina(resultado);
+
+            aJugar();
+
+
+
+
+
         }
 
         casilla=partida.ia();
@@ -92,6 +100,7 @@ public class Juego extends AppCompatActivity {
         if (resultado>0) {
 
             termina(resultado);
+            aJugar();
         }
 
     }
@@ -130,4 +139,15 @@ public class Juego extends AppCompatActivity {
 
 
     }
+
+
+    public void aJugar()
+    {
+
+        Intent intent = new Intent(this,Nombres.class);
+        startActivity(intent);
+
+    }
+
+
 }
