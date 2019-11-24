@@ -12,6 +12,7 @@ import android.widget.Toast;
 
 public class Juego extends AppCompatActivity {
 
+    Partida partida;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,19 +30,7 @@ public class Juego extends AppCompatActivity {
         CASILLAS[6] = R.id.c1;
         CASILLAS[7] = R.id.c2;
         CASILLAS[8] = R.id.c3;
-
-    }
-
-    private int[] CASILLAS;
-    Partida partida;
-
-
-
-
-
-
-    public void toque(View mivista)
-    {
+         partida = new Partida();
         ImageView imagen;
         //Bucle que pondra la imagen casilla (la casilla vacia) en todas las casillas al iniciar
         //para siempre empiecen todas las casillas en blanco
@@ -50,6 +39,19 @@ public class Juego extends AppCompatActivity {
             imagen=(ImageView)findViewById((cadaCasilla));
             imagen.setImageResource(R.drawable.casilla);
         }
+
+    }
+
+    private int[] CASILLAS;
+
+
+
+
+    public void toque(View mivista)
+    {
+
+
+
         //Declaramos la variable jugadores en 1 por defecto para que si pulsamos 1 jugador no ca
         //mbie nada y si pulsamos dos jugadores entre en el if y la cambie a dos
         int casilla = 0;
@@ -63,16 +65,41 @@ public class Juego extends AppCompatActivity {
             }
         }
 
-        Toast toast = Toast.makeText(this,"Has pulsado la casilla "+casilla, Toast.LENGTH_LONG);
+        if(partida.comprueba_casilla(casilla)==false)
+        {
+            return;
+        }
+        marca(casilla);
 
-        toast.setGravity(Gravity.CENTER,0,0);
+        casilla=partida.ia();
 
-        toast.show();
+
+        while(partida.comprueba_casilla(casilla) != true){
+
+            casilla=partida.ia();
+
+        }
+
+       partida.turno();
+
+        marca(casilla);
     }
+
 
     private void marca(int casilla) {
 
         ImageView imagen;
+
+        imagen=(ImageView)findViewById(CASILLAS[casilla]);
+
+        if(partida.jugador==1){
+
+            imagen.setImageResource(R.drawable.circulo);
+        }
+        else {
+
+            imagen.setImageResource(R.drawable.aspa);
+        }
 
 
     }
