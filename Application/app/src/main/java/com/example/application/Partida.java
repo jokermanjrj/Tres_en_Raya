@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class Partida {
 
-        public int dificultad = 0;
+        public int dificultad = 1;
 
 
 
@@ -59,7 +59,6 @@ public class Partida {
                 if(ult_movimiento)return jugador;
 
                 ult_movimiento=true;
-
 
 
             }

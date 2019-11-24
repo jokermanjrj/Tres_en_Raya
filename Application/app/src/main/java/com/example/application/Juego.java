@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RadioGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class Juego extends AppCompatActivity {
@@ -18,6 +19,11 @@ public class Juego extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_juego);
+
+        Nombres nombres = null;
+        /*TextView tx = (TextView) findViewById(R.id.jg);
+        tx.setText(nombres.nm);*/
+
 
         //Iniciamos el array casillas que identifica cada casilla y la almacena en el array
         CASILLAS = new int[9];
@@ -47,7 +53,6 @@ public class Juego extends AppCompatActivity {
 
 
 
-
     public void toque(View mivista)
     {
         int casilla = 0;
@@ -65,8 +70,8 @@ public class Juego extends AppCompatActivity {
         {
             return;
         }
-        marca(casilla);
 
+        marca(casilla);
 
 
         int resultado = partida.turno();

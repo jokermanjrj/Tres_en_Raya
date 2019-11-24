@@ -12,10 +12,10 @@
         android:theme="@style/AppTheme">
         <activity android:name=".Juego"
             android:configChanges = "orientation"
-            android:screenOrientation = "landscape"></activity>
+            android:screenOrientation = "portrait"></activity>
         <activity android:name=".Nombres"
             android:configChanges = "orientation"
-            android:screenOrientation = "landscape"/>
+            android:screenOrientation = "portrait"/>
         <activity android:name=".MainActivity"
             android:configChanges = "orientation"
             android:screenOrientation = "landscape">

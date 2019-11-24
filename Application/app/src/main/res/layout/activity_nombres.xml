@@ -17,17 +17,27 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_gravity="center_vertical">
+
+        <EditText
+            android:id="@+id/nombre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Name" />
+
         <TextView
             android:layout_height="match_parent"
             android:layout_width="match_parent"
             android:text="@string/app_name" />
+
         <Button
             android:id="@+id/unjug"
-            android:text="Un jugador"
-            android:layout_width="match_parent"
+            android:layout_width="183dp"
             android:layout_height="match_parent"
             android:onClick="aJugar"
-            />
+            android:text="Un jugador" />
 
         <RadioGroup
             android:id="@+id/dificultad"
@@ -35,9 +45,9 @@
             android:layout_height="wrap_content">
 
             <RadioButton
-                android:layout_height="match_parent"
-                android:layout_width="match_parent"
                 android:id="@+id/facil"
+                android:layout_width="186dp"
+                android:layout_height="match_parent"
                 android:text="Facil" />
         </RadioGroup>
         <Button
