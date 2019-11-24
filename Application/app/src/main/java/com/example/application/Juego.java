@@ -66,9 +66,14 @@ public class Juego extends AppCompatActivity {
         }
         marca(casilla);
 
+        
 
+        int resultado = partida.turno();
 
-        partida.turno();
+        if (resultado>0){
+
+            termina(resultado);
+        }
 
         casilla=partida.ia();
 
@@ -82,9 +87,30 @@ public class Juego extends AppCompatActivity {
 
         marca(casilla);
 
-        partida.turno();
+        resultado=partida.turno();
+
+        if (resultado>0) {
+
+            termina(resultado);
+        }
 
     }
+
+    private void termina(int resultado)
+    {
+            String mensaje;
+
+            if (resultado==1)mensaje="Gana jugador 1 (Nombre de jugador)";
+            else if(resultado==2) mensaje="Gana la IA";
+            else mensaje="Empate Titan";
+
+            Toast toast = Toast.makeText(this,mensaje,Toast.LENGTH_LONG);
+
+            toast.setGravity(Gravity.CENTER,0,0);
+
+            toast.show();
+    }
+
 
 
     private void marca(int casilla) {
